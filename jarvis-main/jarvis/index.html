@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jarvis</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/ab8461f764.js" crossorigin="anonymous"></script>
+  
+</head>
+<body>
+
+    <button id="btn" onclick="recognition.start()">J</button>
+    <h1 id="result"></h1>
+
+      <!--ODAVDE IDE MUSIC PLAYER   -->
+    
+    
+
+      <div class="player">
+        <div class="container">
+
+            <!--gornje ikone -->
+
+            <div class="icons">
+                <a href="#"><i class="fa fa-bars"></i></a>
+                <h1>MOJA MUZIKA</h1>
+                <a href="#"><i class="far fa-heart"></i></a>
+            
+
+            </div>
+
+
+            <!--slike pesama  -->
+            <div class="img">
+              <img src="slike/slika4.jpg" id="slikee" alt="">
+            </div>
+
+            <!--naslov  -->
+            <div class="title">
+                <h1> I mean it</h1>
+                <p>Izvodi : marcetaking</p>
+            </div>
+
+             <!--vreme pesme   -->
+             <div class="time">
+                 00:00
+                 <span></span>
+                 00:00
+             </div>
+
+             <!--linija  -->
+
+             <div class="seek">
+                 <div class="fill"></div>
+             </div>
+
+             <!--dugmici za pesme   -->
+
+             <div class="audio-btns">
+                 <div class="play-btns">
+                     <a href="#" onclick="proslaPesma()"><i class="fa fa-backward"></i></a>
+
+                     <a href="#" class="play-pause" onclick="togglePlayPause()">
+                         <i class="fa fa-play"></i></a>
+
+                     <a href="#" onclick="sledecaPesma()"><i class="fa fa-forward"></i></a>
+
+                 </div>
+              
+             <div class="repeat-btns">
+                <a href="#"><i class="fa fa-retweet"></i></a>
+              
+                <span>
+                  <button class="decrease" onclick="smanjiTon()">-</button>
+                  <a href="#" class="volume-up"><i class="fa fa-volume-up "></i></a>
+                  <button class="increase" onclick="povecajTon()">+</button>
+                </span>
+
+                <a href="#"><i class="fa fa-random"></i></a>
+
+               </div>
+
+
+              </div>
+             </div>
+        </div>
+
+
+
+<!--ODAVDE IDE VREMEMEMEMEMEMEMMEMEEMME   -->
+
+
+<div id="gornji">
+<input type="text"  id="jedini-input" placeholder="grad">
+    
+<button id="dugme-vreme">Vreme</button>
+</div>
+
+<div class="vreme-container">
+
+    <div class="location">
+        <p id="lokacija">Los Angeles</p>
+    </div>
+
+    <div class="ikona">
+        <img id="ikona-temperature"src="http://openweathermap.org/img/wn/02n@2x.png" alt="">
+    </div>
+
+    <div class="temperatura">
+        <p><span id="vrednost-temperature">25</span><span id="stepeni">&#176 C</span></p>
+    </div>
+
+    <div class="opis-vremena">
+           <p id="kako-je-napolju">Suncano</p>
+    </div>
+
+
+
+
+ </div> 
+
+
+<!--ODAVDE IDE GALERIJAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA   -->
+
+
+<section class="sekcija">
+    <div class="container-galerija">
+  
+      <div class="header">
+          <h1 class="logo">GALERIJA</h1>
+          <div class="input-container">
+              
+              <i class="fas fa-search"></i>
+              <input type="text" placeholder="Search Images" class = "input" >
+           <!-- <ionicon.com odatle cu da uzmem ovu search ikonu koja je zbog outline providna -->
+          </div>
+      </div>
+  
+  
+      <div class="gallery">
+         <!-- <div class="item">
+              <a href="#">
+                  <img src="images/pexels-ella-olsson-1640773.jpg">
+                 
+              </a>
+          </div>
+          <div class="item">
+              <a href="#">
+                  <img src="images/pexels-luis-del-río-15286.jpg">
+                 
+              </a>
+          </div>
+          <div class="item">
+              <a href="#">
+                  <img src="images/1.jpg">
+                
+              </a>
+          </div>
+          <div class="item">
+              <a href="#">
+                  <img src="images/2.jpg">
+                </a>
+          </div>
+          <div class="item">
+              <a href="#">
+                  <img src="images/3.jpg">
+                  
+              </a>
+          </div><div class="item">
+              <a href="#">
+                  <img src="images/4.jpg">
+                  
+              </a>
+          </div>-->
+      </div>
+  <button class="load-more">Load More</button>
+  
+  
+    </div>
+  
+  </section>
+  
+
+
+
+
+   <!-- ODAVDE ALARM             -->
+
+<div class="alarm">
+
+   <input type="datetime-local" id="alarm-time"/>
+
+   <!--tip inputa datetime local omogucje da korisnik 
+   unosi datum i vreme znaci godinu mesec dan i u koliko sati hoce-->
+
+   <button onclick="setAlarm(this)" id = "alarm-button">
+    Postavi Alarm</button>
+
+     <div id="opcijeAlarma" >
+        <button onclick="odlozi()">Odlozi 5Min</button>
+        <button onclick="stopAlarm()">STOP</button>
+
+    </div>
+    
+    <script src="script.js"></script>
+</div>
+    
+</body>
+</html>
